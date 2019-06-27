@@ -8,6 +8,8 @@ import TodosList from "./components/todos-list.component";
 
 import logo from "./githubpng.png";
 
+
+
 class App extends Component {
   render() {
     return (
@@ -15,7 +17,7 @@ class App extends Component {
         <div className="container">
           
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <a className="navbar-brand" href="https://www.github.com/porkpiie" target="_blank">
+            <a className="navbar-brand" href="https://www.github.com/porkpiie" target="">
               <img src={logo} width="30" height="30" alt="github.com" />
             </a>
             <Link to="/" className="navbar-brand">The Second Best ToDo App In The World (behind John's)</Link>

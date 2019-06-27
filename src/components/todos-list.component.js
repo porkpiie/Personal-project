@@ -4,9 +4,9 @@ import axios from 'axios';
 
 const Todo = props => (
     <tr>
-        <td>{props.todo.todo_description}</td>
-        <td>{props.todo.todo_responsible}</td>
-        <td>{props.todo.todo_priority}</td>
+        <td className={props.todo.todo_completed ? 'completed' : ''}>{props.todo.todo_description}</td>
+        <td className={props.todo.todo_completed ? 'completed' : ''}>{props.todo.todo_responsible}</td>
+        <td className={props.todo.todo_completed ? 'completed' : ''}>{props.todo.todo_priority}</td>
         <td>
             <Link to={"/edit/"+props.todo._id}>Edit</Link>
         </td>
@@ -30,6 +30,7 @@ export default class TodosList extends Component {
         })
     }
 
+
     todoList() {
         return this.state.todos.map(function(currentTodo, i){
             return <Todo todo={currentTodo} key={i} />;
@@ -40,7 +41,7 @@ export default class TodosList extends Component {
         return (
             <div>
                 <h3>To-Do List</h3>
-                <table className="table table-striped" style={{ marginTop: 25 }} >
+                <table className="table table-dark" style={{ marginTop: 25 }} >
                     <thead>
                         <tr>
                             <th>Description</th>
