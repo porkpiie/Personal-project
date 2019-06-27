@@ -6,7 +6,7 @@ import CreateTodo from "./components/create-todo.component";
 import EditTodo from "./components/edit-todo.component";
 import TodosList from "./components/todos-list.component";
 
-import logo from "./logo.png";
+import logo from "./githubpng.png";
 
 class App extends Component {
   render() {
@@ -15,14 +15,14 @@ class App extends Component {
         <div className="container">
           
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <a className="navbar-brand" href="https://codingthesmartway.com" target="_blank">
-              <img src={logo} width="30" height="30" alt="CodingTheSmartWay.com" />
+            <a className="navbar-brand" href="https://www.github.com/porkpiie" target="_blank">
+              <img src={logo} width="30" height="30" alt="github.com" />
             </a>
-            <Link to="/" className="navbar-brand">MERN-Stack Todo App</Link>
+            <Link to="/" className="navbar-brand">The Second Best ToDo App In The World (behind John's)</Link>
             <div className="collpase nav-collapse">
               <ul className="navbar-nav mr-auto">
                 <li className="navbar-item">
-                  <Link to="/" className="nav-link">Todos</Link>
+                  <Link to="/" className="nav-link">Todo(s)</Link>
                 </li>
                 <li className="navbar-item">
                   <Link to="/create" className="nav-link">Create Todo</Link>
