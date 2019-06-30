@@ -40,8 +40,8 @@ export default class TodosList extends Component {
     render() {
         return (
             <div>
-                <h3>To-Do List</h3>
-                <table className="table table-dark" style={{ marginTop: 25 }} >
+                <h3 className="header" style={{ marginTop: 10 }} >Should consider getting these done</h3>
+                <table className="table table-dark table-hover" style={{ marginTop: 25 }} >
                     <thead>
                         <tr>
                             <th>Description</th>

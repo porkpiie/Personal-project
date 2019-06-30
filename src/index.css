@@ -1,3 +1,21 @@
+/* html{
+  -webkit-animation:change-color 30s ease 0s infinite normal;
+  -moz-animation:change-color 30s ease 0s infinite normal;
+  -ms-animation:change-color 30s ease 0s infinite normal;
+  animation:change-color 30s ease 0s infinite normal;
+  }
+  
+  @-webkit-keyframes change-color {
+  0%{ background-color:green; }
+  100%{ background-color:red; }
+  }
+  
+  @keyframes change-color {
+  0%{ background-color:green; }
+  100%{ background-color:red; }
+  } */
+
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",

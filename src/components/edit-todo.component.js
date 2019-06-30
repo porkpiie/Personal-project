@@ -20,6 +20,12 @@ export default class EditTodo extends Component {
         }
     }
 
+    // delete() {
+    //     axios.get('http://localhost:4000/business/delete/'+this.props.obj._id)
+    //         .then(console.log('Deleted'))
+    //         .catch(err => console.log(err))
+    // }
+
     componentDidMount() {
         axios.get('http://localhost:4000/todos/'+this.props.match.params.id)
             .then(response => {
@@ -58,6 +64,8 @@ export default class EditTodo extends Component {
             todo_completed: !this.state.todo_completed
         });
     }
+
+    onChangeTodoDelete
 
     onSubmit(e) {
         e.preventDefault();
@@ -151,7 +159,7 @@ export default class EditTodo extends Component {
                         <input type="submit" value="Update Todo" className="btn btn-primary" />
                     </div>
                     <div className="form-group">
-                        <input type="submit" value="Delete entry" className="btn btn-danger" />
+                        <button onClick{...this.delete} className="btn btn-danger">Delete ToDo</button>
                     </div>
                 </form>
             </div>
