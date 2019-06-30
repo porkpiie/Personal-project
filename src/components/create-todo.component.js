@@ -77,7 +77,7 @@ export default class CreateTodo extends Component {
                                 />
                     </div>
                     <div className="form-group">
-                        <label>Responsible: </label>
+                        <label>Who's Responsible?: </label>
                         <input  type="text"
                                 className="form-control"
                                 value={this.state.todo_responsible}

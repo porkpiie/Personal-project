@@ -16,11 +16,8 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div className="container">
+        <div className="container bg-inverse text-color: ">
           <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a className="navbar-brand" href="https://www.github.com/porkpiie" target="">
-              <img src={logo} width="30" height="30" alt="github.com" />
-            </a>
             <Link to="/" className="navbar-brand">The Second Best ToDo App In The World (behind John's)</Link>
             <div className="collpase nav-collapse">
               <ul className="navbar-nav mr-auto">
@@ -32,6 +29,9 @@ class App extends Component {
                 </li>
               </ul>
             </div>
+            <a className="navbar-brand" href="https://www.github.com/porkpiie" target="">
+              <img src={logo} width="30" height="30" alt="github.com" />
+            </a>
           </nav>
 
           <Route path="/" exact component={TodosList} />

@@ -40,12 +40,12 @@ export default class TodosList extends Component {
     render() {
         return (
             <div>
-                <h3 className="header" style={{ marginTop: 10 }} >Should consider getting these done</h3>
+                <h3 className="header" style={{ color: "White", marginTop: 10 }} >Should consider getting these done</h3>
                 <table className="table table-dark table-hover" style={{ marginTop: 25 }} >
                     <thead>
                         <tr>
                             <th>Description</th>
-                            <th>Responsible</th>
+                            <th>Who's Responsible?</th>
                             <th>Priority</th>
                             <th>Action</th>
                         </tr>
