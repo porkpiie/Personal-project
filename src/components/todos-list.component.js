@@ -57,10 +57,9 @@ export default class TodosList extends Component {
                         { this.todoList() }
                     </tbody>
                 </table>
-                    <div>
-                    <footer><p>If you're not seeing changes, hit f5.</p>
-                    <p>&copy; porkpiie 2k19</p>
-                    </footer></div>
+        <div>
+        <p>&copy; porkpiie 2k19</p>
+        </div>
             </div>           
         )
     }

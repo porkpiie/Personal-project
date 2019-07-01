@@ -2,7 +2,7 @@ html body {
   
   color: white;
   text-shadow: 2px 2px black;
-  background-image: url("http://getwallpapers.com/wallpaper/full/6/2/d/52544.jpg");
+  background-image: url("http://getwallpapers.com/wallpaper/full/3/5/7/170948.jpg");
   background-size: cover;
   cursor: pointer;
   margin-top: 15vh;
@@ -13,22 +13,21 @@ html body {
 -moz-osx-font-smoothing: grayscale;
 } 
 
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
 .navbar {
   margin-top: 10px
 }
 
-
-body {
+.container {
   
   border-radius: 20px;
   -moz-border-radius: 20px 20px 20px 20px;
   -webkit-border-radius: 20px 20px 20px 20px;
   border: 5px solid yellowgreen;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
 }
 
 .completed {
