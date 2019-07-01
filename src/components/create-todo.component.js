@@ -54,6 +54,8 @@ export default class CreateTodo extends Component {
 
         axios.post('http://localhost:4000/todos/add', newTodo)
             .then(res => console.log(res.data));
+            this.setState({ redirect: this.state.redirect === false })
+            this.props.history.push('/');
 
         this.setState({
             todo_description: '',
@@ -70,7 +72,7 @@ export default class CreateTodo extends Component {
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group">
                         <label>Description: </label>
-                        <input  type="text"
+                        <input placeholder="Enter what you need doing..." type="text"
                                 className="form-control"
                                 value={this.state.todo_description}
                                 onChange={this.onChangeTodoDescription}
@@ -78,7 +80,7 @@ export default class CreateTodo extends Component {
                     </div>
                     <div className="form-group">
                         <label>Who's Responsible?: </label>
-                        <input  type="text"
+                        <input placeholder="Make them accountable..." type="text"
                                 className="form-control"
                                 value={this.state.todo_responsible}
                                 onChange={this.onChangeTodoResponsible}
@@ -123,8 +125,6 @@ export default class CreateTodo extends Component {
                     <div className="form-group">
                         <input type="submit" value="Create it.. do it" className="btn btn-primary" />
                     </div>
-                   
-                    
                 </form>
             </div>
         )

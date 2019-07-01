@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
+
 const Todo = props => (
     <tr>
         <td className={props.todo.todo_completed ? 'completed' : ''}>{props.todo.todo_description}</td>
@@ -24,6 +25,7 @@ export default class TodosList extends Component {
         axios.get('http://localhost:4000/todos/')
         .then(response => {
             this.setState({ todos: response.data });
+            
         })
         .catch(function (error){
             console.log(error);
@@ -36,6 +38,7 @@ export default class TodosList extends Component {
             return <Todo todo={currentTodo} key={i} />;
         })
     }
+
 
     render() {
         return (
@@ -54,7 +57,11 @@ export default class TodosList extends Component {
                         { this.todoList() }
                     </tbody>
                 </table>
-            </div>
+                    <div>
+                    <footer><p>If you're not seeing changes, hit f5.</p>
+                    <p>&copy; porkpiie 2k19</p>
+                    </footer></div>
+            </div>           
         )
     }
 }

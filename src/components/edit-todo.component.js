@@ -11,6 +11,7 @@ export default class EditTodo extends Component {
         this.onChangeTodoPriority = this.onChangeTodoPriority.bind(this);
         this.onChangeTodoCompleted = this.onChangeTodoCompleted.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
+        
 
         this.state = {
             todo_description: '',
@@ -18,6 +19,7 @@ export default class EditTodo extends Component {
             todo_priority: '',
             todo_completed: false
         }
+        this.deleteTodo = this.deleteTodo.bind(this);
     }
 
     componentDidMount() {
@@ -35,13 +37,18 @@ export default class EditTodo extends Component {
             })        
     }
 
-    delete(id){
-        console.log(id);
-        axios.delete('/todos/'+id)
-          .then((result) => {
-            this.props.history.push("/")
+    deleteTodo(event) {
+        event.preventDefault();
+        console.log(this.state.todo_description)
+        axios.delete('http://localhost:4000/todos/delete/'+this.props.match.params.id)
+          .then(res => {
+            console.log(res)
+              this.setState({ redirect: this.state.redirect === true })
+              this.props.history.push('/');
           });
       }
+
+
 
     onChangeTodoDescription(e) {
         this.setState({
@@ -159,8 +166,8 @@ export default class EditTodo extends Component {
                     <div className="form-group">
                         <input type="submit" value="Update Todo" className="btn btn-primary" />
                     </div>
-                    <div className="form-group">
-                        <button onClick{...this.delete} className="btn btn-danger">Delete ToDo</button>
+                    <div>
+                      <button type="button" onClick={this.deleteTodo} className="btn btn-danger" style={{marginBottom: "10px"}}>Delete ToDo</button>
                     </div>
                 </form>
             </div>
