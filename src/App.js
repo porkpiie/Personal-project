@@ -12,10 +12,10 @@ import logo from "./githubpng.png";
 
 
 class App extends Component {
-
-  changeTodo(todo) {
-    this.setState = {todo}
-  }
+  
+  // changeTodo(todo) {
+  //   this.setState = {todo}
+  // }
 
   render() {
     return (
